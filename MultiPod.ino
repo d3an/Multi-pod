@@ -33,9 +33,12 @@ String ocanada[] = {
 };
 int ocanada_length = 23;
 
-int delay_time[23] = {5000, 2800, 3000, 4000, 2200, 2900, 2500, 2000, 2500, 1500, 4100,2400,2000,2000,4500,2500,3500,5300,2400,5500,4500,2000,4000};
+int delay_time[23] = {5000, 2800, 3000, 4000, 2200, 2900, 2500, 2000, 2500, 1500, 4100,2400,2000,2000,4500,2500,3500,5300,2400,5500,4500,5000,7000};
+
 
 void print_song(String song[], int len, int delay_time[]){
+  lcd.setCursor(0, 1);
+  lcd.print("<chorus>        ");
   delay(11000);
   lcd.setCursor(0, 1);
   lcd.print(song[0]);
@@ -59,5 +62,10 @@ void setup(){
   print_song(ocanada, ocanada_length, delay_time);
 }
 
+
 void loop() {
+  lcd.setCursor(0, 0);
+  lcd.print("Thank you         ");
+  lcd.setCursor(0,1);
+  lcd.print("for listening.    ");
 }
